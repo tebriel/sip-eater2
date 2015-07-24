@@ -73,6 +73,7 @@ def produce(client, messages):
     for datum in messages:
         bytes_writer = io.BytesIO()
         encoder = avro.io.BinaryEncoder(bytes_writer)
+        print("Writing message to kafka")
         writer.write(datum, encoder)
         try:
             producer.send_messages(TOPIC, bytes_writer.getvalue())
@@ -86,7 +87,7 @@ def produce(client, messages):
         print("Sent message #%d" % (message_num))
 
 if __name__ == '__main__':
-    kafka_host = 'kafka1'
+    kafka_host = 'kafka1.localdomain'
     topic_security(kafka_host)
     client = connect(kafka_host)
     # produce(client, sample_data)
