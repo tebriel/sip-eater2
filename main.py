@@ -49,7 +49,7 @@ def topic_security(ip):
 
 
 @app.route('/', methods=['POST'])
-def twilio_endpoint():
+def twilio_request():
     print(request.form)
     data = request.form
     print(json.dumps(data, sort_keys=True, indent=2,
