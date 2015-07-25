@@ -5,7 +5,7 @@
   "fields": [
     {"name": "AccountSid", "type": "string"},
     {"name": "ApiVersion", "type": "string"},
-    {"name": "CallDuration", "type": ["null", "int"]},
+    {"name": "CallDuration", "type": ["null", "string"]},
     {"name": "CallSid", "type": "string"},
     {"name": "CallStatus", "type": "string"},
     {"name": "Called", "type": "string"},
@@ -24,7 +24,7 @@
     {"name": "FromCountry", "type": ["null", "string"]},
     {"name": "FromState", "type": ["null", "string"]},
     {"name": "FromZip", "type": ["null", "string"]},
-    {"name": "RecordingDuration", "type": ["null", "int"]},
+    {"name": "RecordingDuration", "type": ["null", "string"]},
     {"name": "RecordingSid", "type": ["null", "string"]},
     {"name": "RecordingUrl", "type": ["null", "string"]},
     {"name": "To", "type": "string"},
