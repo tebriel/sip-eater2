@@ -50,7 +50,8 @@ def topic_security(ip):
 
 @app.route('/', methods=['POST'])
 def twilio_endpoint():
-    data = json.loads(request.data)
+    print(request.args)
+    data = request.args
     print(json.dumps(data, sort_keys=True, indent=2,
                      separators=(',', ': ')))
 
