@@ -54,7 +54,7 @@ def twilio_endpoint():
 
 
 def produce(client, messages):
-    schema = avro.schema.parse(open("./schemas/twilio.avsc").read())
+    schema = avro.schema.parse(open("/opt/sip-eater/schemas/twilio.avsc").read())
     writer = avro.io.DatumWriter(schema)
     # To wait for acknowledgements
     # ACK_AFTER_LOCAL_WRITE : server will wait till the data is written to
