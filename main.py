@@ -51,7 +51,7 @@ def topic_security(ip):
 @app.route('/', methods=['POST'])
 def twilio_request():
     print(request.form)
-    data = request.form
+    data = request.form.copy()
     duration = data.get('RecordingDuration')
     if duration:
         data['RecordingDuration'] = int(duration)

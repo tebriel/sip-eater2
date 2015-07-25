@@ -7,9 +7,9 @@
     {"name": "ApiVersion", "type": "string"},
     {"name": "CallDuration", "type": ["null", "int"]},
     {"name": "CallSid", "type": "string"},
-    {"name": "CallStatus",
-     "type": "enum",
-     "symbols": ["queued", "ringing", "in-progress", "completed", "busy", "failed", "no-answer"]},
+    {"name": "CallStatus", "type": {
+        "type": "enum", "name": "CALL_STATUS_TYPES", "symbols": ["queued", "ringing", "in-progress", "completed", "busy", "failed", "no-answer"]
+    }},
     {"name": "Called", "type": "string"},
     {"name": "CalledCity", "type": "string"},
     {"name": "CalledCountry", "type": "string"},
@@ -21,9 +21,8 @@
     {"name": "CallerName", "type": ["null", "string"]},
     {"name": "CallerState", "type": "string"},
     {"name": "CallerZip", "type": "string"},
-    {"name": "Direction",
-     "type": "enum",
-     "symbols": ["inbound", "outbound-api", "outbound-dial"]},
+    {"name": "Direction", "type": {
+        "type": "enum", "name": "DIRECTION_TYPES", "symbols": ["inbound", "outbound-api", "outbound-dial"]}},
     {"name": "From", "type": "string"},
     {"name": "FromCity", "type": ["null", "string"]},
     {"name": "FromCountry", "type": ["null", "string"]},
