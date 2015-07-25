@@ -52,6 +52,13 @@ def topic_security(ip):
 def twilio_request():
     print(request.form)
     data = request.form
+    duration = data.get('RecordingDuration')
+    if duration:
+        data['RecordingDuration'] = int(duration)
+    duration = data.get('CallDuration')
+    if duration:
+        data['CallDuration'] = int(duration)
+
     print(json.dumps(data, sort_keys=True, indent=2,
                      separators=(',', ': ')))
 
